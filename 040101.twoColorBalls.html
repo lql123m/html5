@@ -1,0 +1,30 @@
+<!--双色球号码生成器-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>双色球号码生成器</title>
+	</head>
+	<body>
+		<div id="app">
+			<p>你的号码为：<br>{{number}}</p>
+			<button v-on:click="number='红球:'+Math.ceil(Math.random()*100)+','
+											+Math.ceil(Math.random()*100)+','
+											+Math.ceil(Math.random()*100)+','
+											+Math.ceil(Math.random()*100)+','
+											+Math.ceil(Math.random()*100)+','
+											+Math.ceil(Math.random()*100)+','
+											+'蓝球:'+Math.ceil(Math.random()*100)" value="" >生成号码
+			</button>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vm=new Vue({
+				el:'#app',
+				data:{
+					number:'',
+				},
+			})
+		</script>
+	</body>
+</html>
