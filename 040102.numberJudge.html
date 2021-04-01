@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text"  value="请输入整数" v-model="msg" />
+			<h2 v-if='msg%2==0'>是偶数</h2>
+			<h2 v-else>是奇数</h2>
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					msg:'请输入整数'
+					}
+				
+			})
+			
+			
+		</script>
+		<!--Math.round(Math.random()*10)-->
+	</body>
+</html>
