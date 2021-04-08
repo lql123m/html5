@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	   <script src="js/vue.js" type="text/javascript" charset="utf-8">
+		   
+	   </script>
+		
+		
+	</head>
+	<body>
+		<input type="text" v-model="userNumber" name="" id="">
+		{{userNumber}}
+		<div id="app">
+			
+			<div v-for="contry in contrys">
+				<div v-if+"userNumber==contrys.code">
+				{{contry.contryname}}<br>
+					{{contry.sd}}<br>
+						{{contry.code}}<br>
+			
+			</div>
+	
+			</div>
+			<script type="text/javascript">
+				
+				let v=new Vue({
+					
+					el:"#app",
+					data:{
+					userNumber:'',
+						contrys:[
+							{contryname:"中国",sd:"北京",code:"86"}
+							{contryname:"美国",sd:"华盛顿",code:"1"}
+							{contryname:"英国",sd:"伦敦",code:"44"}
+							{contryname:"澳大利亚",sd:"堪培拉",code:"61"},
+							{contryname:"韩国",sd:"首尔",code:"82"}
+						]
+					}
+					
+					
+				}
+				
+				
+				)
+				
+			</script>
+	
+	</body>
+</html>
