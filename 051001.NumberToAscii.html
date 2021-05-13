@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>显示出一个字符的ascii码（按回车键触发）</title>
+<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="app">
+<input type="text" v-model="key" @keyup.enter="show()" /><br>
+{{key}}
+</div>
+<script type="text/javascript">
+let v=new Vue({
+el:'#app',
+data:{
+key:''
+},
+methods:{
+show(){
+alert(v.key.charCodeAt())
+}
+}
+})
+</script>
+</body>
+</html>
